@@ -28,9 +28,11 @@ nx=fread(fid,1,int);ny=fread(fid,1,int);nz=fread(fid,1,int);
 %dx=fread(fid,1,real);dy=fread(fid,1,real);delz=fread(fid,1,real);
 %hr=fread(fid,1,int);
 
-fread(fid,6,int);fread(fid,1,real);fread(fid,1,int);
+fread(fid,5,int);
+nt=fread(fid,1,int);fread(fid,1,real);fread(fid,1,int);
 dt=fread(fid,1,real);nout=fread(fid,1,int);
-fread(fid,2,int);
+fread(fid,1,int);
+hr=fread(fid,1,int);
 dir=setstr(fread(fid,hr,'uchar'));
 fread(fid,2,int);
 vtop=fread(fid,1,real);vbottom=fread(fid,1,real);
