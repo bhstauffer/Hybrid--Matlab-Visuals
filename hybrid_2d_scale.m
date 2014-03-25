@@ -14,6 +14,7 @@ for i=1:nt
     f3=interp2(X,Z,f3,X2,Z2);
     f3=f3.';
     imagesc(f3);
+    caxis([-0.05 0.05]); %Set color axis scaling here.
     colorbar;
     g(i)=getframe;
 end
@@ -24,6 +25,7 @@ if (choice==1)
         f3=interp2(X,Z,f3,X2,Z2);
         f3=f3.';
         imagesc(f3);
+        caxis([-0.05 0.05]); %Set color axis scaling here.
         colorbar;
         g(i)=getframe;
     end

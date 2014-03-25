@@ -5,6 +5,7 @@ for i=1:nt
     f3=reshape(f2(i,:,2,:,comp),[nx,nz]);
     f3=f3.';
     imagesc(f3);
+    caxis([-0.05 0.05]); %Set color axis scaling here.
     colorbar;
     g(i)=getframe;
 end
@@ -14,6 +15,7 @@ if (choice==1)
         f3=reshape(f2(i,:,2,:),[nx,nz]);
         f3=f3.';
         imagesc(f3);
+        caxis([-0.05 0.05]); %Set color axis scaling here.
         colorbar;
         g(i)=getframe;
     end
